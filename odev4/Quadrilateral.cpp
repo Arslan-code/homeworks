@@ -13,7 +13,7 @@ Quadrilateral::Quadrilateral(const Point& a, const Point& c, const Color& color)
 	setA(a);
 	setC(c);
 
-	pts[1].x = c.x; // B noktasının x değeri c noktasının x değerine eşittir diğerleri de 0=a, 1=b, 2=c,3=d olacak şekilde atanmıştır  
+	pts[1].x = c.x; // B noktasÃ½nÃ½n x deÃ°eri c noktasÃ½nÃ½n x deÃ°erine eÃ¾ittir diÃ°erleri de 0=a, 1=b, 2=c,3=d olacak Ã¾ekilde atanmÃ½Ã¾tÃ½r  
 	pts[1].y = a.y;
 
 	pts[3].y = c.y;
@@ -29,19 +29,19 @@ Quadrilateral::Quadrilateral(const Point& a, double width, double height, const 
 
 	pts[0].y = a.y;
 
-	pts[1].x = a.x + width; // a noktasının x degerine genişlik eklendiğinde b kenarının x'ine ulaşılır
+	pts[1].x = a.x + width; // a noktasÃ½nÃ½n x degerine geniÃ¾lik eklendiÃ°inde b kenarÃ½nÃ½n x'ine ulaÃ¾Ã½lÃ½r
 
 	pts[1].y = a.y;
 
 	pts[2].x = pts[1].x;
 
-	pts[2].y = pts[1].y + height; // b noktasının y'sine yükseklik eklendiğinde c noktasının y'sine ulaşılır
+	pts[2].y = pts[1].y + height; // b noktasÃ½nÃ½n y'sine yÃ¼kseklik eklendiÃ°inde c noktasÃ½nÃ½n y'sine ulaÃ¾Ã½lÃ½r
 
 	pts[3].x = a.x;
 
 	pts[3].y = pts[2].y;
 
-	this->color = color; // this ile private'daki colora işaret ediyoruz 
+	this->color = color; // this ile private'daki colora iÃ¾aret ediyoruz 
 
 	isValid();
 }
@@ -85,15 +85,15 @@ Quadrilateral::Quadrilateral(const array<Point, NUMBER_OF_CORNERS>& pts, const C
 Quadrilateral::Color Quadrilateral::getColor() const noexcept
 {
 
-	return (color); // rengin değerini döndürür
+	return (color); // rengin deÃ°erini dÃ¶ndÃ¼rÃ¼r
 }
 
 string Quadrilateral::getColorAsString() const noexcept
 {
-	return Quadrilateral::colorToStringMap.at(color); // rengin bizim yazdığımız string değerini döndürür
+	return Quadrilateral::colorToStringMap.at(color); // rengin bizim yazdÃ½Ã°Ã½mÃ½z string deÃ°erini dÃ¶ndÃ¼rÃ¼r
 }
 
-double Quadrilateral::getPerimeter() const noexcept // kenar uzunlukları hesaplanıyor
+double Quadrilateral::getPerimeter() const noexcept // kenar uzunluklarÃ½ hesaplanÃ½yor
 {
 	double ab_k = sqrt((pts[0].x - pts[1].x) * (pts[0].x - pts[1].x) + (pts[0].y - pts[1].y) * (pts[0].y - pts[1].y));
 	double ad_k = sqrt((pts[0].x - pts[3].x) * (pts[0].x - pts[3].x) + (pts[0].y - pts[3].y) * (pts[0].y - pts[3].y));
@@ -115,10 +115,10 @@ bool Quadrilateral::isValid() const
 			return true;
 		}
 		else {
-			throw "Girilen degerler dortgen belirtmiyor... "; // hatayı fırlatıyor
+			throw "Girilen degerler dortgen belirtmiyor... "; // hatayÃ½ fÃ½rlatÃ½yor
 		}
 	}
-	catch (const std::invalid_argument & ia) { // yakalıyor
+	catch (const std::invalid_argument & ia) { // yakalÃ½yor
 		std::cerr << "Invalid argument: " << ia.what() << endl;
 		return false;
 	}
@@ -126,7 +126,7 @@ bool Quadrilateral::isValid() const
 
 bool Quadrilateral::setA(const Point& pt)
 {
-	pts[0].x = pt.x; // a noktasının koordinat degerleri b,c ve d de asagıda
+	pts[0].x = pt.x; // a noktasÃ½nÃ½n koordinat degerleri b,c ve d de asagÃ½da
 	pts[0].y = pt.y;
 	return false;
 }
@@ -152,10 +152,10 @@ bool Quadrilateral::setD(const Point& pt)
 	return false;
 }
 
-double Quadrilateral::printInfo() const noexcept // dörtgenin bilgilerini basar
+double Quadrilateral::printInfo() const noexcept // dÃ¶rtgenin bilgilerini basar
 {
 	std::cout << "Dikdortgen" << endl;
-	std::cout << "Kose Sayısı : 4" << endl;
+	std::cout << "Kose SayÃ½sÃ½ : 4" << endl;
 	std::cout << "Koseler;" << endl;
 	std::cout << "(" << pts[0].x << ", " << pts[0].y << "),";
 	std::cout << "(" << pts[1].x << ", " << pts[1].y << "),";

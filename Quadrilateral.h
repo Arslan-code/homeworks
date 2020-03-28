@@ -20,13 +20,13 @@ public:
 	};
 	// Constructors
 
-	// Bir dikdörtgen/kare olu?turur a her zaman sol üst noktay?, c her zaman sa? alt noktay? gösterir
+	// Bir dikdÃ¶rtgen/kare olu?turur a her zaman sol Ã¼st noktay?, c her zaman sa? alt noktay? gÃ¶sterir
 	Quadrilateral(const Point& a = { 0, 0 }, const Point& c = { 1, 1 }, const Color& color = Color::GREEN);
 
-	// Verilen en ve boy de?erlerine uygun olarak bir dikdörtgen/kare olu?turur a her zaman sol üst noktay? gösterir
+	// Verilen en ve boy de?erlerine uygun olarak bir dikdÃ¶rtgen/kare olu?turur a her zaman sol Ã¼st noktay? gÃ¶sterir
 	Quadrilateral(const Point& a, double width, double height, const Color& color = Color::GREEN);
 
-	// Verilen noktalara göre dörtgen olu?turur. Bu noktalar?n bir dörtgen olu?turdu?u kontrol edilmeldir.
+	// Verilen noktalara gÃ¶re dÃ¶rtgen olu?turur. Bu noktalar?n bir dÃ¶rtgen olu?turdu?u kontrol edilmeldir.
 	Quadrilateral(const Point& a, const Point& b, const Point& c, const Point& d, const Color& color = Color::GREEN);
 	Quadrilateral(const array<Point, NUMBER_OF_CORNERS>& pts, const Color& color = Color::GREEN);
 
@@ -42,17 +42,17 @@ public:
 	Point getC() const noexcept;
 	Point getD() const noexcept;
 
-	// Dörtgenin rengini string olarak dönderir
+	// DÃ¶rtgenin rengini string olarak dÃ¶nderir
 	Color getColor() const noexcept;
 	string getColorAsString() const noexcept;
 
-	// Dörtgenin çevresini hesaplar ve gönderir
+	// DÃ¶rtgenin Ã§evresini hesaplar ve gÃ¶nderir
 	double getPerimeter() const noexcept;
 
 
-	/* Dörtgen olup olmad???n? kontrol eder.
-	 * Bu fonksiyonun tüm yap?c?lar ve setter fonksiyonlar içinde do?rudan/dolayl? olarak ça?r?lmas? zorunludur.
-	 * E?er verilen de?erler bir dörtgen olu?turmuyorsa invalid_argument exception f?rlat?lmal? ve bu bu exception kontrol edilmelidir
+	/* DÃ¶rtgen olup olmad???n? kontrol eder.
+	 * Bu fonksiyonun tÃ¼m yap?c?lar ve setter fonksiyonlar iÃ§inde do?rudan/dolayl? olarak Ã§a?r?lmas? zorunludur.
+	 * E?er verilen de?erler bir dÃ¶rtgen olu?turmuyorsa invalid_argument exception f?rlat?lmal? ve bu bu exception kontrol edilmelidir
 	 * Program sonland?r?lmamal?d?r.
 	 */
 	bool isValid() const;

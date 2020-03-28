@@ -12,7 +12,7 @@ public:
 	constexpr static int NUMBER_OF_CORNERS{ 3 };
 	enum class Color { PINK, RED, BLUE, WHITE, BLACK, GREEN };
 
-	const map<Triangle::Color, string> colorToStringMap = { // RENKLER›N DEGER›NE KARSILIK STR›NGLER› G›RD›M
+	const map<Triangle::Color, string> colorToStringMap = { // RENKLER√ùN DEGER√ùNE KARSILIK STR√ùNGLER√ù G√ùRD√ùM
 	{ Triangle::Color::RED, "Kirmizi"},
 	{ Triangle::Color::BLUE, "Mavi" },
 	{ Triangle::Color::GREEN, "Yesil" },
@@ -45,8 +45,8 @@ public:
 	bool setC(const Point& pt);
 
 	/* Ucgen olup olmad???n? kontrol eder.
-	 * Bu fonksiyonun t¸m yap?c?lar ve setter fonksiyonlar iÁinde do?rudan/dolayl? olarak Áa?r?lmas? zorunludur.
-	 * E?er verilen de?erler bir ¸Ágen olu?turmuyorsa invalid_argument exception f?rlat?lmal? ve bu bu exception kontrol edilmelidir
+	 * Bu fonksiyonun t√ºm yap?c?lar ve setter fonksiyonlar i√ßinde do?rudan/dolayl? olarak √ßa?r?lmas? zorunludur.
+	 * E?er verilen de?erler bir √º√ßgen olu?turmuyorsa invalid_argument exception f?rlat?lmal? ve bu bu exception kontrol edilmelidir
 	 * Program sonland?r?lmamal?d?r.
 	 */
 	bool isValid() const;

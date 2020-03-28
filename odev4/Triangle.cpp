@@ -48,15 +48,15 @@ Point Triangle::getC() const noexcept
 
 Triangle::Color Triangle::getColor() const noexcept
 {
-	return (color); // rengin degerini döndürür
+	return (color); // rengin degerini dÃ¶ndÃ¼rÃ¼r
 }
 
 string Triangle::getColorAsString() const noexcept
 {
-	return Triangle::colorToStringMap.at(color); // rengin degerine karsılık biz ne string yazdıysak o döner
+	return Triangle::colorToStringMap.at(color); // rengin degerine karsÃ½lÃ½k biz ne string yazdÃ½ysak o dÃ¶ner
 }
 
-double Triangle::getPerimeter() const noexcept // kenarların uzunlugunu hesaplar
+double Triangle::getPerimeter() const noexcept // kenarlarÃ½n uzunlugunu hesaplar
 {
 	double ab_k = sqrt((pts[0].x - pts[1].x) * (pts[0].x - pts[1].x) + (pts[0].y - pts[1].y) * (pts[0].y - pts[1].y));
 	double bc_k = sqrt((pts[1].x - pts[2].x) * (pts[1].x - pts[2].x) + (pts[1].y - pts[2].y) * (pts[1].y - pts[2].y));
@@ -100,7 +100,7 @@ bool Triangle::isValid() const
 			return true;
 		}
 		else {
-			throw invalid_argument("Girdiginiz degerler ucgen belirtmiyor..."); // hatayı fırlatır
+			throw invalid_argument("Girdiginiz degerler ucgen belirtmiyor..."); // hatayÃ½ fÃ½rlatÃ½r
 		}
 	}
 	catch (const std::invalid_argument & ia) {  // yakalar
